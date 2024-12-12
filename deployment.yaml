@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codeigniter4-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: codeigniter4-app
+  template:
+    metadata:
+      labels:
+        app: codeigniter4-app
+    spec:
+      containers:
+      - name: codeigniter4-container
+        image: localhost:5000/codeigniter4.5:0.0.1
+        ports:
+        - containerPort: 80 # Assuming php8.3 runs on port 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: codeigniter4-service
+spec:
+  selector:
+    app: codeigniter4-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
