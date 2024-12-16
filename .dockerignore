@@ -1,0 +1,51 @@
+/.vercel
+/.vscode
+/node_modules
+/tmp
+vercel.json
+/target/*
+
+# Ignore the .git directory and related files
+.git
+.gitignore
+
+# Ignore IDE and editor configuration files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore build and deployment artifacts
+node_modules/
+# vendor/
+composer.lock
+package-lock.json
+
+# Ignore environment and configuration files
+#.env
+#.env.*
+
+# Ignore logs and cache
+writable/logs/
+# writable/cache/
+# writable/debugbar/
+# writable/session/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.orig
+
+# Ignore Docker-related files if not needed in the image
+.dockerignore
+docker-compose.yml
+
+# Ignore CI/CD-related files
+pipeline/
+.github/
+.gitlab/
+
+# Ignore other OS-generated files
+.DS_Store
+Thumbs.db
+.scannerwork
