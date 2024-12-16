@@ -1,0 +1,14 @@
+.DS_Store
+.thumbs.db
+node_modules
+.vscode
+.scannerwork
+
+/dist
+
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
